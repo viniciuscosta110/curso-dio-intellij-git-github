@@ -10,9 +10,43 @@ public class FirstProgram {
         System.out.println("Hello World! " + (a+b) );*/
 
         Cat cat = new Cat();
+        Book book = new Book("Clean Code", 200);
 
+        System.out.println(book);
         System.out.println(cat);
+    }
+}
 
+class Book {
+    private String name;
+    private Integer pagesNum;
 
+    public Book(String name, Integer pagesNum) {
+        this.name = name;
+        this.pagesNum = pagesNum;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getPagesNum() {
+        return pagesNum;
+    }
+
+    public void setPagesNum(Integer pagesNum) {
+        this.pagesNum = pagesNum;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", pagesNum=" + pagesNum +
+                '}';
     }
 }
